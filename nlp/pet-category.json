@@ -1,0 +1,48 @@
+{
+  "Category": ["Pets", "Toys"],
+  "Pets": ["Dog", "Cat", "Bird", "Fish"],
+  "Toys": {
+    "Dog": [
+      "Chew",
+      "Ball",
+      "Puzzle",
+      "Rope",
+      "Ball",
+      "Plush",
+      "Training",
+      "Fetch",
+      "Tug",
+      "Interactive"
+    ],
+    "Cat": [
+      "Wand",
+      "Interactive",
+      "Catnip",
+      "Puzzle",
+      "Scratchers",
+      "Ball",
+      "Tunnel"
+    ],
+    "Bird": [
+      "Swing",
+      "Climbing",
+      "Foraging",
+      "Shredding",
+      "Chewing",
+      "Bell",
+      "Mirror",
+      "Perch",
+      "Feather"
+    ],
+    "Fish": [
+      "Floating",
+      "Bubble",
+      "Light-up",
+      "Plants",
+      "Backgrounds",
+      "Bravel",
+      "Substrate",
+      "Puzzles"
+    ]
+  }
+}

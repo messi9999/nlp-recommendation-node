@@ -1,0 +1,829 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "let,me,pet,show": {
+            "intent": "pet",
+            "domain": "default"
+          },
+          "pet": {
+            "intent": "pet",
+            "domain": "default"
+          },
+          "kind,of,pet,what": {
+            "intent": "pet",
+            "domain": "default"
+          },
+          "i,need,pet": {
+            "intent": "pet",
+            "domain": "default"
+          },
+          "toy": {
+            "intent": "toy",
+            "domain": "default"
+          },
+          "let,me,show,toy": {
+            "intent": "toy",
+            "domain": "default"
+          },
+          "for,let,me,pet,show,toy": {
+            "intent": "toy",
+            "domain": "default"
+          },
+          "pet,toy": {
+            "intent": "toy",
+            "domain": "default"
+          },
+          "of,pet,toy": {
+            "intent": "toy",
+            "domain": "default"
+          },
+          "dog,toy": {
+            "intent": "dog",
+            "domain": "default"
+          },
+          "dog": {
+            "intent": "dog",
+            "domain": "default"
+          },
+          "dog,pet": {
+            "intent": "dog",
+            "domain": "default"
+          },
+          "dog,pet,toy": {
+            "intent": "dog",
+            "domain": "default"
+          },
+          "dog,i,need,toy": {
+            "intent": "dog",
+            "domain": "default"
+          },
+          "dog,let,me,pleas,show,toy,would,you": {
+            "intent": "dog",
+            "domain": "default"
+          },
+          "are,dog,kind,of,there,toy,what": {
+            "intent": "dog",
+            "domain": "default"
+          },
+          "cat,toy": {
+            "intent": "cat",
+            "domain": "default"
+          },
+          "cat": {
+            "intent": "cat",
+            "domain": "default"
+          },
+          "cat,i,need,toy": {
+            "intent": "cat",
+            "domain": "default"
+          },
+          "cat,let,me,pleas,show,toy,would,you": {
+            "intent": "cat",
+            "domain": "default"
+          },
+          "are,cat,kind,of,there,toy,what": {
+            "intent": "cat",
+            "domain": "default"
+          },
+          "bird,toy": {
+            "intent": "bird",
+            "domain": "default"
+          },
+          "bird": {
+            "intent": "bird",
+            "domain": "default"
+          },
+          "bird,i,need,toy": {
+            "intent": "bird",
+            "domain": "default"
+          },
+          "bird,let,me,pleas,show,toy,would,you": {
+            "intent": "bird",
+            "domain": "default"
+          },
+          "are,bird,kind,of,there,toy,what": {
+            "intent": "bird",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "pet": "default",
+          "toy": "default",
+          "dog": "default",
+          "cat": "default",
+          "bird": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "let me show pet",
+            "intent": "pet"
+          },
+          {
+            "domain": "default",
+            "utterance": "pets",
+            "intent": "pet"
+          },
+          {
+            "domain": "default",
+            "utterance": "what kind of pet?",
+            "intent": "pet"
+          },
+          {
+            "domain": "default",
+            "utterance": "I need pet.",
+            "intent": "pet"
+          },
+          {
+            "domain": "default",
+            "utterance": "toy",
+            "intent": "toy"
+          },
+          {
+            "domain": "default",
+            "utterance": "toys",
+            "intent": "toy"
+          },
+          {
+            "domain": "default",
+            "utterance": "let me show toys",
+            "intent": "toy"
+          },
+          {
+            "domain": "default",
+            "utterance": "Let me show toys for pets",
+            "intent": "toy"
+          },
+          {
+            "domain": "default",
+            "utterance": "pets toy",
+            "intent": "toy"
+          },
+          {
+            "domain": "default",
+            "utterance": "toys of pet",
+            "intent": "toy"
+          },
+          {
+            "domain": "default",
+            "utterance": "dog toy",
+            "intent": "dog"
+          },
+          {
+            "domain": "default",
+            "utterance": "dogs",
+            "intent": "dog"
+          },
+          {
+            "domain": "default",
+            "utterance": "dog",
+            "intent": "dog"
+          },
+          {
+            "domain": "default",
+            "utterance": "pet dog",
+            "intent": "dog"
+          },
+          {
+            "domain": "default",
+            "utterance": "pet dog toy",
+            "intent": "dog"
+          },
+          {
+            "domain": "default",
+            "utterance": "I need dog toy",
+            "intent": "dog"
+          },
+          {
+            "domain": "default",
+            "utterance": "Would you please let me show dog toys?",
+            "intent": "dog"
+          },
+          {
+            "domain": "default",
+            "utterance": "What kind of dog toys are there?",
+            "intent": "dog"
+          },
+          {
+            "domain": "default",
+            "utterance": "cat toy",
+            "intent": "cat"
+          },
+          {
+            "domain": "default",
+            "utterance": "cats",
+            "intent": "cat"
+          },
+          {
+            "domain": "default",
+            "utterance": "cat",
+            "intent": "cat"
+          },
+          {
+            "domain": "default",
+            "utterance": "I need cat toy",
+            "intent": "cat"
+          },
+          {
+            "domain": "default",
+            "utterance": "Would you please let me show cat toys?",
+            "intent": "cat"
+          },
+          {
+            "domain": "default",
+            "utterance": "What kind of cat toys are there?",
+            "intent": "cat"
+          },
+          {
+            "domain": "default",
+            "utterance": "bird toy",
+            "intent": "bird"
+          },
+          {
+            "domain": "default",
+            "utterance": "birds",
+            "intent": "bird"
+          },
+          {
+            "domain": "default",
+            "utterance": "bird",
+            "intent": "bird"
+          },
+          {
+            "domain": "default",
+            "utterance": "I need bird toy",
+            "intent": "bird"
+          },
+          {
+            "domain": "default",
+            "utterance": "Would you please let me show bird toys?",
+            "intent": "bird"
+          },
+          {
+            "domain": "default",
+            "utterance": "What kind of bird toys are there?",
+            "intent": "bird"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "let": 1,
+              "me": 1,
+              "show": 1,
+              "pet": 1,
+              "what": 1,
+              "kind": 1,
+              "of": 1,
+              "i": 1,
+              "need": 1,
+              "toy": 1,
+              "for": 1,
+              "dog": 1,
+              "would": 1,
+              "you": 1,
+              "pleas": 1,
+              "are": 1,
+              "there": 1,
+              "cat": 1,
+              "bird": 1
+            },
+            "intents": {
+              "pet": 1,
+              "toy": 1,
+              "dog": 1,
+              "cat": 1,
+              "bird": 1
+            },
+            "intentFeatures": {
+              "pet": {
+                "let": 1,
+                "me": 1,
+                "show": 1,
+                "pet": 1,
+                "what": 1,
+                "kind": 1,
+                "of": 1,
+                "i": 1,
+                "need": 1
+              },
+              "toy": {
+                "toy": 1,
+                "let": 1,
+                "me": 1,
+                "show": 1,
+                "for": 1,
+                "pet": 1,
+                "of": 1
+              },
+              "dog": {
+                "dog": 1,
+                "toy": 1,
+                "pet": 1,
+                "i": 1,
+                "need": 1,
+                "would": 1,
+                "you": 1,
+                "pleas": 1,
+                "let": 1,
+                "me": 1,
+                "show": 1,
+                "what": 1,
+                "kind": 1,
+                "of": 1,
+                "are": 1,
+                "there": 1
+              },
+              "cat": {
+                "cat": 1,
+                "toy": 1,
+                "i": 1,
+                "need": 1,
+                "would": 1,
+                "you": 1,
+                "pleas": 1,
+                "let": 1,
+                "me": 1,
+                "show": 1,
+                "what": 1,
+                "kind": 1,
+                "of": 1,
+                "are": 1,
+                "there": 1
+              },
+              "bird": {
+                "bird": 1,
+                "toy": 1,
+                "i": 1,
+                "need": 1,
+                "would": 1,
+                "you": 1,
+                "pleas": 1,
+                "let": 1,
+                "me": 1,
+                "show": 1,
+                "what": 1,
+                "kind": 1,
+                "of": 1,
+                "are": 1,
+                "there": 1
+              }
+            },
+            "featuresToIntent": {
+              "let": [
+                "pet",
+                "toy",
+                "dog",
+                "cat",
+                "bird"
+              ],
+              "me": [
+                "pet",
+                "toy",
+                "dog",
+                "cat",
+                "bird"
+              ],
+              "show": [
+                "pet",
+                "toy",
+                "dog",
+                "cat",
+                "bird"
+              ],
+              "pet": [
+                "pet",
+                "toy",
+                "dog"
+              ],
+              "what": [
+                "pet",
+                "dog",
+                "cat",
+                "bird"
+              ],
+              "kind": [
+                "pet",
+                "dog",
+                "cat",
+                "bird"
+              ],
+              "of": [
+                "pet",
+                "toy",
+                "dog",
+                "cat",
+                "bird"
+              ],
+              "i": [
+                "pet",
+                "dog",
+                "cat",
+                "bird"
+              ],
+              "need": [
+                "pet",
+                "dog",
+                "cat",
+                "bird"
+              ],
+              "toy": [
+                "toy",
+                "dog",
+                "cat",
+                "bird"
+              ],
+              "for": [
+                "toy"
+              ],
+              "dog": [
+                "dog"
+              ],
+              "would": [
+                "dog",
+                "cat",
+                "bird"
+              ],
+              "you": [
+                "dog",
+                "cat",
+                "bird"
+              ],
+              "pleas": [
+                "dog",
+                "cat",
+                "bird"
+              ],
+              "are": [
+                "dog",
+                "cat",
+                "bird"
+              ],
+              "there": [
+                "dog",
+                "cat",
+                "bird"
+              ],
+              "cat": [
+                "cat"
+              ],
+              "bird": [
+                "bird"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "let",
+                "me",
+                "show",
+                "pet",
+                "what",
+                "kind",
+                "of",
+                "i",
+                "need",
+                "toy",
+                "for",
+                "dog",
+                "would",
+                "you",
+                "pleas",
+                "are",
+                "there",
+                "cat",
+                "bird"
+              ],
+              "intents": [
+                "pet",
+                "toy",
+                "dog",
+                "cat",
+                "bird"
+              ],
+              "perceptrons": [
+                [
+                  0.3386044502258301,
+                  0.3386044502258301,
+                  0.3386044502258301,
+                  10.863006591796875,
+                  1.1471500396728516,
+                  1.1471500396728516,
+                  -1.3371999263763428,
+                  0.4930949807167053,
+                  0.4930949807167053,
+                  -13.153876304626465,
+                  -4.396164894104004,
+                  -13.129354476928711,
+                  0,
+                  0,
+                  0,
+                  -0.2649800777435303,
+                  -0.2649800777435303,
+                  -2.4657511711120605,
+                  -2.463754415512085,
+                  2.4833978180905323
+                ],
+                [
+                  -0.04319678619503975,
+                  -0.04319678619503975,
+                  -0.04319678619503975,
+                  -0.4014550745487213,
+                  -1.5898327827453613,
+                  -1.5898327827453613,
+                  0.4195815622806549,
+                  -2.100386142730713,
+                  -2.100386142730713,
+                  13.781431198120117,
+                  0.5662304162979126,
+                  -14.304784774780273,
+                  -2.2976207733154297,
+                  -2.2976207733154297,
+                  -2.2976207733154297,
+                  -1.3003538846969604,
+                  -1.3003538846969604,
+                  -14.298830032348633,
+                  -14.289741516113281,
+                  0.5561362754396518
+                ],
+                [
+                  -0.44631150364875793,
+                  -0.44631150364875793,
+                  -0.44631150364875793,
+                  -0.0066712116822600365,
+                  -0.1465746909379959,
+                  -0.1465746909379959,
+                  -0.5077511072158813,
+                  -0.0009122777846641839,
+                  -0.0009122777846641839,
+                  -0.006291599478572607,
+                  -0.15144823491573334,
+                  14.281075477600098,
+                  0.4464229345321655,
+                  0.4464229345321655,
+                  0.4464229345321655,
+                  0.40048307180404663,
+                  0.40048307180404663,
+                  -2.4739644527435303,
+                  -1.977067470550537,
+                  0.01099500098721972
+                ],
+                [
+                  -0.4455958604812622,
+                  -0.4455958604812622,
+                  -0.4455958604812622,
+                  -1.8516970872879028,
+                  -0.05965006351470947,
+                  -0.05965006351470947,
+                  -0.16633403301239014,
+                  0.1283835619688034,
+                  0.1283835619688034,
+                  -0.3159655034542084,
+                  -0.05172467231750488,
+                  -1.691541075706482,
+                  0.526727020740509,
+                  0.526727020740509,
+                  0.526727020740509,
+                  0.2652696967124939,
+                  0.2652696967124939,
+                  13.953648567199707,
+                  -2.8130886554718018,
+                  0.4068628191200409
+                ],
+                [
+                  -0.5847330093383789,
+                  -0.5847330093383789,
+                  -0.5847330093383789,
+                  -2.14047908782959,
+                  -0.04420822858810425,
+                  -0.04420822858810425,
+                  -0.24545659124851227,
+                  0.13696935772895813,
+                  0.13696935772895813,
+                  -0.3370964229106903,
+                  -0.13495294749736786,
+                  -2.059239149093628,
+                  0.6712896823883057,
+                  0.6712896823883057,
+                  0.6712896823883057,
+                  0.29757797718048096,
+                  0.29757797718048096,
+                  -1.7232258319854736,
+                  13.931442260742188,
+                  0.43407150905093433
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "let me show pet"
+      ],
+      [
+        "en",
+        "pets"
+      ],
+      [
+        "en",
+        "what kind of pet?"
+      ],
+      [
+        "en",
+        "I need pet."
+      ],
+      [
+        "en",
+        "toy"
+      ],
+      [
+        "en",
+        "toys"
+      ],
+      [
+        "en",
+        "let me show toys"
+      ],
+      [
+        "en",
+        "Let me show toys for pets"
+      ],
+      [
+        "en",
+        "pets toy"
+      ],
+      [
+        "en",
+        "toys of pet"
+      ],
+      [
+        "en",
+        "dog toy"
+      ],
+      [
+        "en",
+        "dogs"
+      ],
+      [
+        "en",
+        "dog"
+      ],
+      [
+        "en",
+        "pet dog"
+      ],
+      [
+        "en",
+        "pet dog toy"
+      ],
+      [
+        "en",
+        "I need dog toy"
+      ],
+      [
+        "en",
+        "Would you please let me show dog toys?"
+      ],
+      [
+        "en",
+        "What kind of dog toys are there?"
+      ],
+      [
+        "en",
+        "cat toy"
+      ],
+      [
+        "en",
+        "cats"
+      ],
+      [
+        "en",
+        "cat"
+      ],
+      [
+        "en",
+        "I need cat toy"
+      ],
+      [
+        "en",
+        "Would you please let me show cat toys?"
+      ],
+      [
+        "en",
+        "What kind of cat toys are there?"
+      ],
+      [
+        "en",
+        "bird toy"
+      ],
+      [
+        "en",
+        "birds"
+      ],
+      [
+        "en",
+        "bird"
+      ],
+      [
+        "en",
+        "I need bird toy"
+      ],
+      [
+        "en",
+        "Would you please let me show bird toys?"
+      ],
+      [
+        "en",
+        "What kind of bird toys are there?"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "toy": [
+          {
+            "answer": "Which pet do you mean?"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

@@ -1,0 +1,20 @@
+{
+"query": "Chew toys for small dogs",
+"completion": [
+    "Chew",
+    "Rope",
+    "Squeaky",
+    "Ball",
+    "Plush"
+]
+}
+{
+"query": "Squeaky toys for large dogs",
+"completion": [
+    "Squeaky",
+    "Chew",
+    "Rope",
+    "Ball",
+    "Plush"
+]
+}
