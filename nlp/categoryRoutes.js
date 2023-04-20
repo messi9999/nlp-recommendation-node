@@ -44,12 +44,16 @@ function getDatabase() {
     catToys = await catData["Toys"]["Cat"];
     birdToys = await catData["Toys"]["Bird"];
     fishToys = await catData["Toys"]["Fish"];
+    products = await catData["Products"];
   });
 }
 getDatabase();
 
 const chooseRandom = (arr, num = 1) => {
   const res = [];
+  // if (num < arr.length) {
+  //   num = arr.length;
+  // }
   for (let i = 0; i < num; ) {
     const random = Math.floor(Math.random() * arr.length);
     if (res.indexOf(arr[random]) !== -1) {
@@ -79,13 +83,16 @@ categoryExtractor.post(
       var summary;
       var toys;
       var answers = new Object();
+      var recommends;
       switch (result.intent) {
         case "pet":
           console.log("pet");
+          recommends = chooseRandom(products, (num = 5));
           summary = await getData("Summary of pet toys");
           answers = {
             intents: pets,
             summary: summary,
+            recommends: recommends,
           };
           res.status(201).send({
             message: "keywords",
@@ -104,9 +111,11 @@ categoryExtractor.post(
           prompt += toys[toys.length - 1];
           prompt += " toys for dogs";
           summary = await getData(prompt);
+          recommends = chooseRandom(products, (num = 5));
           answers = {
             intents: toys,
             summary: summary,
+            recommends: recommends,
           };
           res.status(201).send({
             message: "keywords",
@@ -125,9 +134,11 @@ categoryExtractor.post(
           prompt += toys[toys.length - 1];
           prompt += " toys for cats";
           summary = await getData(prompt);
+          recommends = chooseRandom(products, (num = 5));
           answers = {
             intents: toys,
             summary: summary,
+            recommends: recommends,
             isquestion: false,
           };
           res.status(201).send({

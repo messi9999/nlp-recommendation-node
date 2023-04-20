@@ -2,10 +2,20 @@ const axios = require("axios");
 
 require("dotenv").config();
 
+const crypto = require("crypto");
+const ENC = "bf3c199c2470cb477d907b1e0917c17b";
+const IV = "5183666c72eec9e4";
+const ALGO = "aes-256-cbc";
+const decrypt = (text) => {
+  let decipher = crypto.createDecipheriv(ALGO, ENC, IV);
+  let decrypted = decipher.update(text, "base64", "utf8");
+  return decrypted + decipher.final("utf8");
+};
+
 const config = {
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+    Authorization: `Bearer ${decrypt(process.env.OPENAI_API_KEY)}`,
   },
 };
 
