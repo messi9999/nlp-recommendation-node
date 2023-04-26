@@ -5,7 +5,7 @@ const { NlpManager } = require("node-nlp");
 
 const getData = require("../openaicom");
 
-const keyword_extractor = require("keyword-extractor");
+// const keyword_extractor = require("keyword-extractor");
 const fs = require("fs");
 
 const categoryExtractor = express.Router();
