@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const categoryRoutes = require("./nlp/categoryRoutes");
+const nlpRoutes = require("./nlp/nlpRouter");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 
@@ -14,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-app.use("/api/category", categoryRoutes);
+app.use("/api/nlp", nlpRoutes);
 // app.get("/api/keyword", function (req, res) {});
 app.get("/", (req, res) => {
   res.send({ message: "hello" });

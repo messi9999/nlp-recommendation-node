@@ -19,6 +19,7 @@
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
     "keyword-extractor": "^0.0.25",
+    "natural": "^6.2.0",
     "node-fetch": "^2.6.9",
     "node-nlp": "^4.26.1"
   }

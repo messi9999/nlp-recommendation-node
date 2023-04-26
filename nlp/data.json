@@ -1,0 +1,11 @@
+{
+  "Category": [
+    "Balls",
+    "Feather Toys",
+    "Mice & Animal Toys",
+    "Tunnels",
+    "Catrip Toys"
+  ],
+  "Size": ["Small", "Big", "Large"],
+  "Animal": ["Dogs", "Cats", "Birds", "Small Animals"]
+}
