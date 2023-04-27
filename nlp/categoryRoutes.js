@@ -11,7 +11,7 @@ const fs = require("fs");
 const categoryExtractor = express.Router();
 // var dataset = new Object();
 
-const data = fs.readFileSync(__dirname + "\\" + "model.nlp", "utf8");
+const data = fs.readFileSync(__dirname + "/" + "model.nlp", "utf8");
 const manager = new NlpManager();
 manager.import(data);
 
